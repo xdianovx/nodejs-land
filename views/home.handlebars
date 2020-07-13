@@ -13,7 +13,7 @@
 	    					</a>
 		          	<div class="text">
 		          		<span class="subheading">Hello</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Niko Bochser</span></h1>
+			            <h1 class="mb-4 mt-3">Я <span>{{developerName}}</span></h1>
 			            <h2 class="mb-4">A Freelance Web Developer</h2>
 			            <p><a href="#" class="btn-custom">Hire me</a></p>
 		            </div>
@@ -34,7 +34,7 @@
 	    						<span class="ion-ios-play play"></span>
 	    					</a>
 		          	<div class="text">
-			            <h1 class="mb-4 mt-3">I'm a <span>web designer</span> from Scotland</h1>
+			            <h1 class="mb-4 mt-3">I'm a <span>web designer</span> {{countryName}}</h1>
 			            <p><a href="#" class="btn-custom">Hire me</a></p>
 		            </div>
 		          </div>
@@ -379,18 +379,19 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+
+            <form action="/contact" method="POST" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name='name'>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" name='email'>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" name='subj'>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
